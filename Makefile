@@ -2,7 +2,7 @@
 #  Makefile
 #
 #  (c) 2012-2024 by Markus Reschke
-#  based on code from Markus Frejek and Karl-Heinz Kübbeler
+#  based on code from Markus Frejek and Karl-Heinz Kï¿½bbeler
 #
 
 PROJECT = ComponentTester
@@ -22,14 +22,14 @@ PROJECT = ComponentTester
 # - ATmega 1280            : atmega1280
 # - ATmega 1284/1284P      : atmega1284
 # - ATmega 2560            : atmega2560
-MCU = atmega328
+MCU = atmega324p
 
 # MCU freqency:
 # - 1MHz  : 1
 # - 8MHz  : 8
 # - 16MHz : 16
 # - 20MHz : 20
-FREQ = 8
+FREQ = 16
 
 # oscillator type
 # - internal RC oscillator      : RC
@@ -69,7 +69,7 @@ endif
 # - ATmega 1284   : m1284
 # - ATmega 1284P  : m1284p
 # - ATmega 2560   : m2560
-PARTNO = m328p
+PARTNO = m324pa
 
 # avrdude: ISP programmer, port and options
 
@@ -84,9 +84,9 @@ PARTNO = m328p
 #OPTIONS = -B 10.0
 
 # Diamex ALL-AVR/AVR-Prog
-PROGRAMMER = avrispmkII
-PORT = usb
-OPTIONS = -B 1.0
+#PROGRAMMER = avrispmkII
+#PORT = usb
+#OPTIONS = -B 1.0
 
 # Pololu USB AVR Programmer
 #PROGRAMMER = stk500v2
@@ -99,9 +99,9 @@ OPTIONS = -B 1.0
 #OPTIONS = -B 20
 
 # USBtinyISP
-#PROGRAMMER = usbtiny
-#PORT = usb
-#OPTIONS = -B 5.0
+PROGRAMMER = usbtiny
+PORT = usb
+OPTIONS = -B 5.0
 
 # Arduino Uno bootloader via serial/USB
 #PROGRAMMER = arduino
