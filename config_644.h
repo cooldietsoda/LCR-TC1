@@ -751,7 +751,7 @@
 #define LCD_DOTS_Y       160            /* number of vertical dots */
 #define LCD_OFFSET_X     2               /* enable x offset of 2 or 4 dots */
 #define LCD_OFFSET_Y     1               /* enable y offset of 1 or 2 dots */
-//#define LCD_FLIP_X                      /* enable horizontal flip */
+#define LCD_FLIP_X                      /* enable horizontal flip */
 #define LCD_FLIP_Y                      /* enable vertical flip */
 #define LCD_ROTATE                      /* switch X and Y (rotate by 90�) */
 //#define LCD_BGR                         /* reverse red and blue color channels */
