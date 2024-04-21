@@ -1,0 +1,13 @@
+# Copy this file to /etc/udev/rules.d/90-atmel.rules
+# AVR ISP mkII - DIAMEX ALL-AVR
+SUBSYSTEM=="usb", ATTRS {idVendor}=="03eb", ATTS {idProduct}=="2104", MODE="0660",
+GROUP = "plugdev",
+# USB ISP-programmer für Atmel AVR
+SUBSYSTEM=="usb", ENV {DEVTYPE}=="usb_device", SYSFS {idVendor}=="16c0", MODE="0666",
+SYSFS {idProduct} == "05dc",
+# USB asp programmer
+ATTRS {idVendor}=="16c0", ATTRS {idProduct}=="05dc", GROUP="plugdev", MODE="0660"
+# USBtiny programmer
+ATTRS {idVendor}=="1781", ATTRS {idProduct}=="0c9f", GROUP="plugdev", MODE="0660"
+# Pololu programmer
+SUBSYSTEM=="usb", ATTRS {idVendor}=="1ffb", MODE="0666"
